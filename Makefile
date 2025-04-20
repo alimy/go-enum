@@ -81,7 +81,7 @@ gen-test: build
 	$(GO) generate --tags=example $(PACKAGES)
 
 install:
-	$(GO) install
+	$(GO) install -ldflags='$(LDFLAGS)'
 
 phony: clean tc build
 
